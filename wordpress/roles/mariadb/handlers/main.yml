@@ -1,5 +1,8 @@
 ---
-# Handler to handle DB tier notifications
+# Handler to handle DB
+# if any error happend here we should start mariadb manually with: systemctl start mariadb.service with root user
+# not root privilege may cuz error
 
 - name: restart mariadb
   service: name=mariadb state=restarted
+  ignore_errors: true
