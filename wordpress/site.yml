@@ -1,6 +1,6 @@
 ---
 - name: Install WordPress, MariaDB, Nginx, and PHP-FPM
-  hosts: all
+  hosts: web
   become: yes
   become_user: root
 
